@@ -2,6 +2,7 @@
 import express, { Express } from 'express';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
+import cors from "cors"
 
 dotenv.config();
 const port = process.env.PORT;
@@ -13,6 +14,7 @@ const app:Express = express();
 app.set('port', port)
 
 // APP MIDDLEWARES
+app.use(cors())
 app.use(morgan('dev'))
 
 // APP ROUTES

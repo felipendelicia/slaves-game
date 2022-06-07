@@ -4,7 +4,10 @@ const userSchema = new Schema ({
     username: String,
     name: String,
     passwordHash: String,
-    slaves: [String]
+    slaves: [String],
+    goldCoins: Number,
+    chickens: Number,
+    goats: Number
 })
 
 userSchema.set('toJSON', {
